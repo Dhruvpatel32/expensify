@@ -1,0 +1,19 @@
+html{
+    font: size 62.5%;
+}
+body{
+    font-family: Helvetica, sans-serif,Arial ;
+    
+}
+button{
+    cursor:pointer;
+    border-radius: .2rem;
+     color:darkgreen;
+    border:none;
+}
+button:disabled{
+    cursor:default;
+}
+.is-active{
+    font-weight: bold;
+}
