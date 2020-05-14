@@ -2,6 +2,7 @@ import React from 'react';
 import {ExpenseList} from '../../components/expenseList';
 import {shallow} from 'enzyme';
 import moment from 'moment';
+import Adapter from 'enzyme-adapter-react-16';
 const expense=[
     {
         id:"1",
