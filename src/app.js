@@ -12,13 +12,6 @@ import visibleData from './selectors/expenses.js'
 import 'react-dates/lib/css/_datepicker.css';
 const store=storeConfig();
 
-store.dispatch(addExpense(({description:"water bill",amount:500})));
-store.dispatch(addExpense(({description:"light bill",amount:300,createdAt:20})));
-store.dispatch(addExpense(({description:"rent",amount:30,createdAt:1000})));
-
-
-
-
 const state=store.getState();
 const viewData=visibleData(state.expense,state.filter);
 console.log(viewData); 

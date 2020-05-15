@@ -5,8 +5,8 @@ import numeral from 'numeral';
 // load a locale
 numeral.register('locale', 'fr', {
     delimiters: {
-        thousands: ' ',
-        decimal: ','
+        thousands: ',',
+        decimal: '.'
     },
     abbreviations: {
         thousand: 'k',
