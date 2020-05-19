@@ -19,6 +19,8 @@ const expensesReducer=(state=defaultexpenseReducer,action)=>{
                      return expense;
                  }
              }) 
+        case 'SET_EXPENSES':
+            return action.expenses;     
          
         default :
          return  state
