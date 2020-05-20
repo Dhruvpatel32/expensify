@@ -6,6 +6,15 @@ export const editExpense=(id,update)=>({
     update
 
 })
+export const starteditExpense=(id,update)=>{
+   return  (dispatch)=>{
+       return database.ref(`expenses/${id}`).update(update).then(
+           ()=>{
+               dispatch(editExpense(id,update));
+           }
+       )
+   }
+}
 export const addExpense=(expenses)=>(
     {
         type:'ADD_EXPENSE',
@@ -37,6 +46,12 @@ export const removeById=({id}={})=>(
         id
     }
 )
+export const startremoveexpense=({id}={})=>{
+    return (dispatch)=>{
+       return database.ref(`expenses/${id}`).remove().then(()=>{
+           dispatch(removeById({id}));
+       })
+    }}
 
 export const  setExpense =(expenses)=>({
     type:'SET_EXPENSES',
