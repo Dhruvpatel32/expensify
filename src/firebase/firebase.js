@@ -16,7 +16,9 @@ const firebaseConfig = {
   firebase.analytics();
 
    const database=firebase.database();
- export {firebase, database as default};
+   const googleauthProvider=new firebase.auth.GoogleAuthProvider();
+
+ export {firebase, database as default,googleauthProvider};
 
 
 
@@ -24,75 +26,3 @@ const firebaseConfig = {
 
 
 
-// Database.ref('expenses').on('value',(snapshot)=>{
-//     const expenses = [];
-//     snapshot.forEach((childsnapshot)=>{
-//         expenses.push({
-//             id:childsnapshot.key,
-//             ...childsnapshot.val()
-//         })
-//     })
-//     console.log(expenses);
-// })
-
-
-
-// Database.ref('expenses').push({
-//     description:"rent",
-//     amount:23.42,
-//     note:"",
-//     createdAt:"15 may,2020"
-// }
-// ),
-
-// Database.ref('expenses').push(
-//     {
-//         description:"bill",
-//         amount:232.42,
-//         note:"",
-//         createdAt:"11 may,2020"
-//     }
-// ),
-// Database.ref('expenses').push(
-//     {
-//         description:"food",
-//         amount:133.42,
-//         note:"",
-//         createdAt:"1 may,2020"
-//     }
-// )
-
-
-
-
-
-   //   Database.ref().on('value',(snapshot)=>{
-//     console.log(snapshot.val());
-//   })
-//    Database.ref().set({
-//       name: 'dhruv patel',
-//       age:19,
-//       married:false,
-//       location : {
-//           city:'ahmedabad',
-//           state:'gujarat'
-//       }
-
-//   }).then(()=>{
-//       console.log('data is resolved!!!');
-//   }).catch((e)=>{
-//       console.log('failed',e);
-//   })
-
-// //   Database.ref().remove().then(()=>{
-// //    console.log("data is removed");
-// //   }).catch((e)=>{
-// //       console.log('erroe:',e);
-// //   })
-// Database.ref().update(
-//     {
-//         name: 'dhruvi',
-//         age:18,
-//         job:'software devloper'
-//     }
-// )
