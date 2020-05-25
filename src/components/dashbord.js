@@ -6,7 +6,7 @@ const ExpanseDashBordpage=()=>(
     <div className="container">
     <div className="add_b">
     <Link to="/create">
-            <button className="button"> Add Expense</button>
+            <button className="button_d"> Add Expense</button>
         </Link>
         <data className="data"> Click on Expense To Edit</data>
     </div>
