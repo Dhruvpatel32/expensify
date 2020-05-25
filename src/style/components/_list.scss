@@ -18,7 +18,7 @@
     &:hover{
         background-color: lightgrey;
     }
-    @media(min-width:55rem){
+    @media(min-width:85rem){
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
@@ -28,7 +28,7 @@
 }
 .list_body{
     margin-bottom:20px;
-    @media (min-width:55rem){
+    @media (min-width:85rem){
         margin-bottom: 30px;
     }
 }
@@ -50,7 +50,7 @@
 }
 .list_i_d{
     margin:5px 0 0 0 ;
-    @media (min-width:55rem){
+    @media (min-width:85rem){
         margin:0;
         padding-left:10px;
     }

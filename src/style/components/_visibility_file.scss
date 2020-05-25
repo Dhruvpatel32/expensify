@@ -1,10 +1,10 @@
 .show_mobile{
-@media (min-width:55rem){
+@media (min-width:85rem){
  display: none;
 }
 }
 .show_desktop{
-    @media (max-width:55rem  - .01rem){
+    @media (max-width:85rem  - .01rem){
         display: none;
        }
 
