@@ -8,12 +8,17 @@ import {startAddExpanse } from '../actions/expense'
         this.props.history.push("/")}
    render(){
        return (
-        <div>
+        <div >
+        <div className="container">
         <h1>Add Expanse</h1>
+        </div>
+        <div className="container">
         <ExpanseForm
             onSubmit={this.onSubmit}
             
         />
+        </div>
+        
     </div>
        )
    }     

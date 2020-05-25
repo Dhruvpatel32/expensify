@@ -12,11 +12,16 @@ onClick= ()=>{
     this.props.history.push('/')}  
     render(){
         return (<div>
+           
+            <div className="container">
+            <h1>Edit Expense</h1>
             <ExpenseForm 
         expense={this.props.expense}
         onSubmit={this.onSubmit} />
-       <button onClick={this.onClick}>Remove</button>
-        </div>) ;
+       <button onClick={this.onClick} className="remove_button">Remove Expense</button>
+            </div>
+        </div>
+        ) ;
     } 
 }
 

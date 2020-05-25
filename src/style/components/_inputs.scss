@@ -1,0 +1,16 @@
+.text-input{
+    border:1px solid #cacccd;
+    height:50px;
+    padding:5px;
+    font-weight: 300;
+}
+.select{
+    @extend .text-input;
+
+}
+.remove_button{
+    background: fade-out(rgb(197,27,90), .15);
+    height: 30px;
+    color:black;
+    padding:5px;
+}

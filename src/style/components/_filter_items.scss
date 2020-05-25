@@ -1,0 +1,16 @@
+.container_main{
+display:flex;
+
+flex-direction: column;
+margin-bottom:10px;
+
+@media (min-width: 45rem) {
+ flex-direction: row;
+ margin-right:20px;
+}
+}
+.list_items{
+margin-right: 10px;
+margin-bottom:10px;
+
+}

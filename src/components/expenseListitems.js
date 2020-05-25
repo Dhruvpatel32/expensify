@@ -25,13 +25,18 @@ numeral.locale('fr');
 
 
 const Expenselist=({id,description,amount,createdAt})=>(
-    <div>
-        <Link to={`/editexpanse/${id}`}>
-        <h3>{description}</h3>
-        </Link>
-        <p>{numeral(amount).format('$0,0.00')} ----{moment(createdAt).format('MMMM Do, YYYY')}</p>
+    
+        <Link to={`/editexpanse/${id}`} className="list_i">
+        <div>
+        <h3 className="list_i_t">{description}</h3>
+        <span className="list_i_st">{moment(createdAt).format('MMMM Do, YYYY')}</span>
+        </div>
+        <h3 className="list_i_d">{numeral(amount).format('$0,0.00')}</h3>
         
-    </div>
+        </Link>
+        
+        
+    
 );
 
 export default (Expenselist);

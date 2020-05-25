@@ -15,11 +15,15 @@ class ExpenseListTextFilter extends React.Component{
     }
     render(){
         return (
-            <div>
-            <input type="text" value={this.props.filter.text} onChange={(e)=>{
+            <div className="container">
+            <div className="container_main">
+            <div className="list_items">
+            <input className="text-input" placeholder="Serch Expenses" type="text" value={this.props.filter.text} onChange={(e)=>{
               {this.props.dispatch(setTextFilter(e.target.value))}
             }}/>
-            <select vlaue={this.props.filter.sortBy} onChange={(e)=>{
+            </div>
+            <div className="list_items">
+            <select className="select" vlaue={this.props.filter.sortBy} onChange={(e)=>{
                 if(e.target.value==='date'){
                     this.props.dispatch(sortBydate())
                 }
@@ -30,7 +34,9 @@ class ExpenseListTextFilter extends React.Component{
                 <option value="date">Date</option>
                 <option value="amount">Amount</option>
             </select>
-           <DateRangePicker
+            </div>
+            <div className="list_items">
+            <DateRangePicker
                startDate={this.props.filter.startDate}
                endDate={this.props.filter.endDate}
                onDatesChange={this.onDatesChange}
@@ -41,6 +47,8 @@ class ExpenseListTextFilter extends React.Component{
                isOutsideRange={()=>false}
 
            />
+            </div> 
+        </div>
         </div>
         )
     } 

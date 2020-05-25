@@ -12,14 +12,8 @@ import expenseReducer from './reducers/expenseReducer';
 import visibleData from './selectors/expenses.js'
 import 'react-dates/lib/css/_datepicker.css';
 import {firebase} from './firebase/firebase.js';
+import LoadingPage from './components/loadingpage';
 
-let hasRender=false;
-const renderApp=()=>{
-   if(!hasRender){
-      ReactDOM.render(jsx,document.getElementById("templet1"));
-      hasRender=true;
-   }
-}
 const store=storeConfig();
 const state=store.getState();
 const viewData=visibleData(state.expense,state.filter);
@@ -32,7 +26,15 @@ const jsx=(
 )
 
 
-   
+let hasRender=false;
+const renderApp=()=>{
+   if(!hasRender){
+      ReactDOM.render(jsx,document.getElementById("templet1"));
+      hasRender=true;
+   }
+}
+  ReactDOM.render(<LoadingPage/>,document.getElementById("templet1")); 
+  
 firebase.auth().onAuthStateChanged(
    (user)=>{
       if(user)

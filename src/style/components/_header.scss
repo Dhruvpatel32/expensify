@@ -1,0 +1,40 @@
+.header{
+    background: fade-out(rgb(197,27,90), .15);
+    padding:10px;
+    
+}
+.container_h{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0px;
+}
+.button_h{
+    
+    color:white;
+    background-color: darkgray;
+}
+.header_l{
+    text-decoration: none;
+    font-family: Freestyle Script;
+    color:black;
+    font-size: 55px;
+     margin:0;
+        
+}
+.main_h{
+    text-decoration: none;
+}
+.add_b{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:20px;  
+}
+.data{
+    font-size: 20px;
+
+    @media(min-width: 45rem){
+        font-size:30px;
+    }
+}
